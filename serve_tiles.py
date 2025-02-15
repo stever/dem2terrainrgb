@@ -6,7 +6,6 @@ class TileRequestHandler(SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET')
-        self.send_header('Content-Type', 'image/png')
         super().end_headers()
 
 if __name__ == '__main__':

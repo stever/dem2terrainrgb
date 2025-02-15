@@ -36,6 +36,7 @@ optional arguments:
 The below is an example command. Before executing this module, you must reproject your DEM to EPSG:3857 coordinates by using GDAL or QGIS.
 ```
 python main.py --dem ./terr50_gagg_gb.tif --dist ./output/tiles --zoom 0-12 --webp --remove_png
+python main.py --dem ./terr50_gagg_gb.tif --dist ./output/tiles --zoom 0-12 # to use PNG
 ```
 
 Finally, you can delete all of xml files under tiles folder.
