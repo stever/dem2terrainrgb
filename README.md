@@ -7,7 +7,12 @@ This module is to convert DEM to terrain RGB raster tiles.
 
 ```
 cd dem2terrainrgb
-pipenv install
+virtualenv venv
+. ./venv/bin/activate
+pip install Pillow      # For image processing (PIL)
+pip install rasterio    # For DEM processing
+pip install rio-rgbify  # Plugin for converting DEM to RGB terrain
+pip install tqdm        # For progress bars
 ```
 
 ## Usage
@@ -30,8 +35,7 @@ optional arguments:
 
 The below is an example command. Before executing this module, you must reproject your DEM to EPSG:3857 coordinates by using GDAL or QGIS.
 ```
-pipenv shell
-python main.py --dem ./data/rwanda_dem_EPSG3857_10m.tif --dist ./tiles --webp --zoom 5-15
+python main.py --dem ./terr50_gagg_gb.tif --dist ./output/tiles --zoom 0-12 --webp --remove_png
 ```
 
 Finally, you can delete all of xml files under tiles folder.
