@@ -137,7 +137,7 @@ class Dem2TerrainRgb(object):
 
 
 def get_parser():
-  prog = "dem2terrainrgb.py"
+  prog = "create_tiles.py"
   parser = argparse.ArgumentParser(
       prog=prog,
       usage="%(prog)s --dem {dem file path} --dist {output directory path} --tmp {temporary directory path} --webp --remove_png --zoom {min-max zoom}",

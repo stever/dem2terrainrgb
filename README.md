@@ -18,7 +18,7 @@ pip install tqdm        # For progress bars
 ## Usage
 
 ```
-$ python main.py -h
+$ python create_tiles.py -h
 usage: dem2terrainrgb.py --dem {dem file path} --dist {output directory path} --tmp {temporary directory path} --webp --remove_png --zoom {min-max zoom}
 
 This module is to convert DEM to terrain RGB raster tiles.
@@ -33,10 +33,12 @@ optional arguments:
   --zoom ZOOM   Specify min-max zoom level for tiles. Default is 5-15.
 ```
 
-The below is an example command. Before executing this module, you must reproject your DEM to EPSG:3857 coordinates by using GDAL or QGIS.
+Before executing this module, you must reproject your DEM to EPSG:3857 coordinates by using GDAL or QGIS.
+
+Example commands:
 ```
-python main.py --dem ./terr50_gagg_gb.tif --dist ./output/tiles --zoom 0-12 --webp --remove_png
-python main.py --dem ./terr50_gagg_gb.tif --dist ./output/tiles --zoom 0-12 # to use PNG
+python create_tiles.py --dem ./terr50_gagg_gb.tif --dist ./tiles --zoom 0-12 --webp --remove_png
+python create_tiles.py --dem ./terr50_gagg_gb.tif --dist ./tiles --zoom 0-12
 ```
 
 Finally, you can delete all of xml files under tiles folder.
